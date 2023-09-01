@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.event.ActionEvent;
 
 public class CalculadoraJava extends JFrame {
@@ -33,11 +34,13 @@ public class CalculadoraJava extends JFrame {
 		});
 	}
 
+	ArrayList<String> num1 = new ArrayList();
+	ArrayList <String> num2 = new ArrayList();
 	String operacao = "";
-	String num1 = "";
-	String pontoNum1 = "";
-	String num2 = "";
-	String pontoNum2 = "";
+	String numDigUm = "";
+	String numDigDois = "";
+	Boolean pontoNumUm = false;
+	Boolean pontoNumDois = false;
 	
 	/**
 	 * Create the frame.
@@ -77,20 +80,26 @@ public class CalculadoraJava extends JFrame {
 		JButton btn1 = new JButton("1");
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "1");
-					num1 += "1";
-					
+					numDigUm += "1";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "1";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
-					
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "1";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
@@ -103,20 +112,26 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btn2);
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "2");
-					num1 += "2";
-					
+					numDigUm += "2";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "2";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "2";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
@@ -127,20 +142,26 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btn3);
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "3");
-					num1 += "3";
-					
+					numDigUm += "3";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "3";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
-					
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "3";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
@@ -151,20 +172,26 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btn4);
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e ) {
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "4");
-					num1 += "4";
-					
+					numDigUm += "4";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "4";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
-					
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "4";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
@@ -175,20 +202,26 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btn5);
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed( ActionEvent e) {
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "5");
-					num1 += "5";
-					
+					numDigUm += "5";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "5";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
-					
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "5";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
@@ -199,20 +232,26 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btn6);
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "6");
-					num1 += "6";
-					
+					numDigUm += "6";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "6";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
-					
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "6";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
@@ -223,20 +262,26 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btn7);
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed( ActionEvent e) {
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "7");
-					num1 += "7";
-					
+					numDigUm += "7";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "7";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
-					
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "7";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
@@ -247,20 +292,26 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btn8);
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "8");
-					num1 += "8";
-					
+					numDigUm += "8";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "8";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
-					
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "8";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
@@ -271,33 +322,69 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btn9);
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//preencher o primeiro número
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
 				if(operacao == "") {
-					
-					Tela.setText(num1 + "9");
-					num1 += "9";
-					
+					numDigUm += "9";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
 				}
-				//preencher o segundo número
-				else if((num1 != "") && (operacao != "")) {
-					
-					num2 += "9";
-					Tela.setText(num1 + " " + operacao + " " + num2);
-					System.out.println("Num2: " + num2);
-					
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "9";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
 				}
 			}
 		});
 
+		//------------------------------------BUTTON NUMERO 0-----------------------------------
+		JButton btn0 = new JButton("0");
+		btn0.setBounds(10, 330, 134, 51);
+		contentPane.add(btn0);
+		btn0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//SE FOR O PRIMEIRO NÚMERO QUE ESTÁ SENDO DEIGITADO
+				if(operacao == "") {
+					numDigUm += "0";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num1.clear();
+					//ADICIONA O NOVO NÚMERO
+					num1.add(numDigUm);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm);
+				}
+				
+				//SE FOR O SEGUNDO NÚMERO QUE ESTÁ SENDO DIGITADO
+				if(operacao != "") {
+					numDigDois += "0";
+					//ZERA O ARRAY PARA ADICIONAR O NOVO NÚMERO
+					num2.clear();
+					//ADICIONA O NOVO NÚMERO
+					num2.add(numDigDois);
+					//MOSTRA NA TELA O NUMERO
+					Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
+				}
+			}
+		});
+		
 		//-----------------------------BUTTON DE DIVISÃO-----------------------------
 		JButton btnDividir = new JButton("/");
 		btnDividir.setBounds(154, 82, 63, 51);
 		contentPane.add(btnDividir);
 		btnDividir.addActionListener(new ActionListener() {
 			public void actionPerformed( ActionEvent e) {
-				if((num1 != "") && (operacao == "")) {
+				if((num1.size() != 0) && (operacao == "")) {
 					
-					Tela.setText(num1 + " / ");
+					Tela.setText(numDigUm + " / ");
 					operacao = "/";
 					
 				}
@@ -310,9 +397,9 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btnMultiplicar);
 		btnMultiplicar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if((num1 != "") && (operacao == "")) {
+				if((num1.size() != 0) && (operacao == "")) {
 					
-					Tela.setText(num1 + " * ");
+					Tela.setText(numDigUm + " * ");
 					operacao = "*";
 					
 				}
@@ -325,9 +412,9 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btnSubtrair);
 		btnSubtrair.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if((num1 != "") && (operacao == "")) {
+				if((num1.size() != 0) && (operacao == "")) {
 					
-					Tela.setText(num1 + " - ");
+					Tela.setText(numDigUm + " - ");
 					operacao = "-";
 					
 				}
@@ -338,9 +425,9 @@ public class CalculadoraJava extends JFrame {
 		JButton btnSoma = new JButton("+");
 		btnSoma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if((num1 != "") && (operacao == "")) {
+				if((num1.size() != 0) && (operacao == "")) {
 					
-					Tela.setText(num1 + " + ");
+					Tela.setText(numDigUm + " + ");
 					operacao = "+";
 					
 				}
@@ -355,28 +442,39 @@ public class CalculadoraJava extends JFrame {
 		contentPane.add(btnPonto);
 		btnPonto.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//se o ponto for para o primeiro número digitado
-				if((pontoNum1 == "") && (operacao == "") && (num2 == "")) {
-					
-					Tela.setText(num1 + ".");
-					pontoNum1 = ".";
-					
-				}
 				
-				//se o ponto for para o segundo número digitado
-				if((pontoNum2 == "") && (operacao != "") && (num2 != "")) {
-					
-					Tela.setText(num1 + " " + operacao + " " + num2 + ".");
-					
-				}
-					
+				//PRIMEIRO NÚMERO DIGITADO
+					if((operacao == "") && (numDigUm != "")) {
+						//VERIFICA SE JA TEM UM PONTO NO NÚMERO
+							if(pontoNumUm == false) {
+								numDigUm += ".";
+								num1.clear();
+								num1.add(numDigUm);
+								Tela.setText(numDigUm);
+								pontoNumUm = true;
+							}
+							//ADICIONA O PONTO
+							else {
+								return;
+							}
+					}
+				//SEGUNDO NÚMERO DIGITADO
+					if((operacao != "") && (numDigDois != "")) {
+						//VERIFICA SE JA TEM UM PONTO NO NÚMERO
+						if(pontoNumDois == false) {
+							numDigDois += ".";
+							num1.clear();
+							num1.add(numDigDois);
+							Tela.setText(numDigUm + " " + operacao + " " + numDigDois);
+							pontoNumDois = true;
+						}
+						//ADICIONA O PONTO
+						else {
+							return;
+						}
+					}
 			}
 		});
-
-		//------------------------------------BUTTON NUMERO 0-----------------------------------
-		JButton btn0 = new JButton("0");
-		btn0.setBounds(10, 330, 134, 51);
-		contentPane.add(btn0);
 
 		//---------------------------BUTTON PARA MOSTRAR O RESULTADO--------------------------
 		JButton btnIgual = new JButton("=");
